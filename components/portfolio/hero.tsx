@@ -42,7 +42,7 @@ export function Hero() {
 
           <div className="flex items-center justify-center gap-4">
             <a
-              href="https://github.com/julexo/julexo"
+              href="https://github.com/DevLeonJA"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-secondary hover:bg-secondary/80 text-foreground transition-colors"
