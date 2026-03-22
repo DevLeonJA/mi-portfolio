@@ -49,7 +49,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <h3 className="text-xl font-semibold text-foreground mb-2">
           {project.title}
         </h3>
-        <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
+        <p className="text-muted-foreground text-sm mb-4">
           {project.description}
         </p>
         <div className="flex flex-wrap gap-2">

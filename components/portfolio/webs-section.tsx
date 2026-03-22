@@ -2,28 +2,12 @@ import { ProjectCard, Project } from "./project-card"
 
 const webProjects: Project[] = [
   {
-    title: "E-Commerce Store",
-    description: "Tienda online completa con carrito de compras, pasarela de pago y panel de administración.",
-    image: "/projects/ecommerce.jpg",
-    technologies: ["Next.js", "Stripe", "PostgreSQL", "Tailwind"],
-    demoUrl: "https://ejemplo.com",
-    repoUrl: "https://github.com",
-  },
-  {
-    title: "Dashboard Analytics",
-    description: "Panel de control con visualización de datos en tiempo real y reportes personalizados.",
-    image: "/projects/dashboard.jpg",
-    technologies: ["React", "D3.js", "Node.js", "MongoDB"],
-    demoUrl: "https://ejemplo.com",
-    repoUrl: "https://github.com",
-  },
-  {
-    title: "Blog Personal",
-    description: "Blog con sistema de gestión de contenido, comentarios y suscripción por email.",
-    image: "/projects/blog.jpg",
-    technologies: ["Next.js", "MDX", "Supabase", "Tailwind"],
-    demoUrl: "https://ejemplo.com",
-    repoUrl: "https://github.com",
+    title: "Inazuma Victory Road Foro",
+    description: "Foro dedicado a la comunidad de Inazuma Victory Road para discutir sobre alineaciones usando un drag and drop para añadir los jugadores.",
+    image: "/projects/VRF.png",
+    technologies: ["Next.js", "TypeScript", "PostgreSQL", "Tailwind", "React.js", "Python"],
+    demoUrl: "https://victoryroadforo.vercel.app",
+    repoUrl: "https://github.com/DevLeonJA/inazuma-foro",
   },
 ]
 

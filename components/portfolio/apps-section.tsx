@@ -1,30 +1,6 @@
 import { ProjectCard, Project } from "./project-card"
 
 const appProjects: Project[] = [
-  {
-    title: "FitTracker",
-    description: "App de seguimiento de entrenamientos con estadísticas, rutinas personalizadas y recordatorios.",
-    image: "/projects/fitness.jpg",
-    technologies: ["React Native", "Firebase", "Redux"],
-    demoUrl: "https://ejemplo.com",
-    repoUrl: "https://github.com",
-  },
-  {
-    title: "TaskMaster",
-    description: "Gestor de tareas con categorías, recordatorios y sincronización en la nube.",
-    image: "/projects/tasks.jpg",
-    technologies: ["Flutter", "Dart", "SQLite"],
-    demoUrl: "https://ejemplo.com",
-    repoUrl: "https://github.com",
-  },
-  {
-    title: "WeatherNow",
-    description: "App del tiempo con pronóstico extendido, mapas interactivos y alertas meteorológicas.",
-    image: "/projects/weather.jpg",
-    technologies: ["React Native", "API REST", "Geolocation"],
-    demoUrl: "https://ejemplo.com",
-    repoUrl: "https://github.com",
-  },
 ]
 
 export function AppsSection() {
