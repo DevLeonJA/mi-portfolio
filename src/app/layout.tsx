@@ -8,22 +8,29 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.app',
+  title: 'DevLeonJA | Portfolio',
+  description: 'Portfolio personal de Juan Antonio León Cobos. Desarrollo web y de aplicaciones con Next.js, TypeScript y Tailwind CSS.',
+  authors: [
+    {
+      name: 'Juan Antonio León Cobos',
+    },
+  ],
+  manifest: '/manifest.json',
+  appleWebApp: {
+    title: 'MiPortfolio',
+  },
   icons: {
     icon: [
       {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
+        url: '/favicon.ico',
       },
       {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
+        url: '/icon0.svg',
         type: 'image/svg+xml',
+      },
+      {
+        url: '/icon1.png',
+        type: 'image/png',
       },
     ],
     apple: '/apple-icon.png',
@@ -36,7 +43,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="es" suppressHydrationWarning>
       <body className="font-sans antialiased">
         <ThemeProvider
           attribute="class"

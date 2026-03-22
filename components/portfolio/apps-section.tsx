@@ -13,7 +13,7 @@ export function AppsSection() {
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto rounded-full mb-4" />
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Apps móviles que he desarrollado para iOS y Android
+            
           </p>
         </div>
 
