@@ -1,3 +1,6 @@
+"use client"
+
+import { useState } from "react"
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -17,6 +20,9 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project }: ProjectCardProps) {
+  const [showMobileActions, setShowMobileActions] = useState(false)
+  const hasActions = Boolean(project.demoUrl || project.repoUrl)
+
   return (
     <Card className="group overflow-hidden bg-card border-border hover:border-primary/50 transition-colors">
       <div className="relative aspect-video overflow-hidden">
@@ -26,7 +32,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           fill
           className="object-cover transition-transform duration-300 group-hover:scale-105"
         />
-        <div className="absolute inset-0 bg-background/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
+        <div className="absolute inset-0 bg-background/60 opacity-0 md:group-hover:opacity-100 transition-opacity hidden md:flex items-center justify-center gap-4">
           {project.demoUrl && (
             <Button size="sm" asChild>
               <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
@@ -62,6 +68,39 @@ export function ProjectCard({ project }: ProjectCardProps) {
             </span>
           ))}
         </div>
+        {hasActions && (
+          <div className="mt-5 md:hidden">
+            <Button
+              type="button"
+              variant="outline"
+              className="w-full"
+              onClick={() => setShowMobileActions((prev) => !prev)}
+            >
+              {showMobileActions ? "Ocultar enlaces" : "Ver enlaces"}
+            </Button>
+
+            {showMobileActions && (
+              <div className="mt-4 flex flex-wrap justify-center gap-3">
+                {project.demoUrl && (
+                  <Button size="sm" asChild>
+                    <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="h-4 w-4 mr-2" />
+                      Demo
+                    </a>
+                  </Button>
+                )}
+                {project.repoUrl && (
+                  <Button size="sm" variant="outline" asChild>
+                    <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">
+                      <Github className="h-4 w-4 mr-2" />
+                      Código
+                    </a>
+                  </Button>
+                )}
+              </div>
+            )}
+          </div>
+        )}
       </CardContent>
     </Card>
   )
